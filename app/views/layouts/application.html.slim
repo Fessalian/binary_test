@@ -23,9 +23,17 @@ html ng-app="testApp"
     link rel="apple-touch-icon" href="/favicon.png"
     link rel="apple-touch-icon" sizes="72x72" href="/favicon.png"
     link rel="apple-touch-icon" sizes="114x114" href="/favicon.png"
+    link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
     script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"
     script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.js"
-
     = stylesheet_link_tag     "application", "data-turbolinks-track" => true, media: "all"
     = javascript_include_tag  "application", "data-turbolinks-track" => true
   body ng-controller="MainCtrl"
+    header
+      nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"
+        div class="container"
+          div class="navbar-header"
+            a class="navbar-brand" href="#" CookBook
+
+    section class="container"
+      div ng-view="ng-view"
